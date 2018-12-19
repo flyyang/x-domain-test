@@ -1,0 +1,17 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+            <script src="https://unpkg.com/xdomain@0.8.2/dist/xdomain.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script>
+              xdomain.slaves({
+                "http://localhost:58000": "/proxy.html"
+              })
+              xdomain.debug = true;
+              debugger
+              $.get('http://localhost:58000/api/test').then(function (data) {  debugger; console.log(data)});
+            </script>
+    </body>
+</html>

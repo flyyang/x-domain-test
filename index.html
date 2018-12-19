@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+    </head>
+    <body>
+<iframe name="domain1" style="display:none;" src="http://localhost:58000/proxy.html"></iframe>
+<script>
+    window.addEventListener("message", receiveMessage, false);
+
+function receiveMessage(event) {
+    console.log(event)
+}
+window.frames["domain1"].postMessage('xxx', '*');
+
+</script>
+    </body>
+</html>
