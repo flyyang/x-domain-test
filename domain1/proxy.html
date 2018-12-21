@@ -1,14 +1,19 @@
 <!doctype html>
 <html>
-    <head>
 
-    </head>
-    <body>
-            <script src="//unpkg.com/xdomain@0.8.2/dist/xdomain.js"></script>
-            <script>
-              xdomain.masters({
-                "http://localhost:8000": "*"
-              })
-            </script>
-    </body>
+<head>
+
+</head>
+
+<body>
+  <script src="./xdomain.js"></script>
+  <script>
+    xdomain.masters({
+      "http://localhost:8000": "*"
+    })
+    window.addEventListener('message', (data) => { console.log(data.data, 'master to slave') })
+
+  </script>
+</body>
+
 </html>
